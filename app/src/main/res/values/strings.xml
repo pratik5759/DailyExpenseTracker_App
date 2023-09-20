@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Udaily</string>
+    <string name="Title">Category</string>
+    <string name="spinner_content_description">Select a category</string>
+
+</resources>

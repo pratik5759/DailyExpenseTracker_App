@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="4dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="?selectableItemBackground"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/priority_one"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_margin="10dp"
+        android:layout_gravity="end"
+        android:background="@drawable/green_shape"/>
+    <RelativeLayout
+        android:id="@+id/recycler_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+
+
+
+        <TextView
+            android:id="@+id/ct_one"
+            android:text="your note"
+            android:textSize="18sp"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLength="30"
+            android:maxLines="1"/>
+    <TextView
+        android:layout_below="@+id/ct_one"
+        android:id="@+id/note_one"
+        android:text="your note"
+        android:textSize="18sp"
+        android:ellipsize="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLength="30"
+        android:maxLines="1"/>
+
+        <TextView
+            android:layout_below="@+id/note_one"
+            android:id="@+id/amount_one"
+            android:textColor="@color/red"
+            android:text="200"
+            android:textSize="20sp"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/date_one"
+            android:textColor="@color/black"
+            android:layout_below="@+id/amount_one"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="07 april 2023 02:06"/>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

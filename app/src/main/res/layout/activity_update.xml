@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafafa"
+    android:orientation="vertical"
+    tools:context=".updateActivity">
+
+    <RelativeLayout
+        android:id="@+id/dashboard_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#87CEEB">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="Udaily"
+            android:textColor="@color/black"
+            android:textSize="35sp" />
+
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/user_amount_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:hint="Amount"
+        android:inputType="number"
+        android:padding="15dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Category :-"
+            android:textSize="20dp" />
+
+        <Spinner
+            android:id="@+id/dropdown_menu_category2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:autofillHints="Category"
+            android:background="@android:drawable/btn_dropdown"
+            android:contentDescription="@string/spinner_content_description"
+            android:prompt="@string/Title"
+            android:spinnerMode="dropdown" />
+
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/user_note_add"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="10dp"
+        android:gravity="start"
+        android:hint="note"
+        android:inputType="textCapWords"
+        android:padding="15dp"
+        android:textAlignment="textStart" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <CheckBox
+            android:id="@+id/Expense_checkbox"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="Expense"
+            android:textColor="#FF0000"
+            android:textStyle="bold" />
+
+        <CheckBox
+
+            android:id="@+id/Income_checkbox"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="48dp"
+            android:layout_weight="1"
+            android:text="Income"
+            android:textColor="#00FF00" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_update_transaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Update" />
+
+    <Button
+        android:id="@+id/btn_delete_transaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:text="delete" />
+
+
+</LinearLayout>

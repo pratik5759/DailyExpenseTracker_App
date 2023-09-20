@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="Udaily">
+        <menu>
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/baseline_home_24"
+            android:title="Home"/>
+
+        <item
+            android:id="@+id/nav_analysis"
+            android:icon="@drawable/baseline_auto_graph_24"
+            android:title="Transaction Analysis"/>
+        </menu>
+    </item>
+
+
+
+    <item android:title="Profile">
+        <menu>
+            <item
+                android:id="@+id/nav_change_password"
+                android:icon="@drawable/baseline_password_reset_24"
+                android:title="Change Password"/>
+
+            <item
+                android:id="@+id/nav_log_out"
+                android:icon="@drawable/baseline_logout_24"
+                android:title="Log Out"/>
+        </menu>
+    </item>
+
+    <item android:title="Team">
+        <menu>
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/baseline_about_24"
+                android:title="About Us"/>
+        </menu>
+    </item>
+
+
+
+</menu>
