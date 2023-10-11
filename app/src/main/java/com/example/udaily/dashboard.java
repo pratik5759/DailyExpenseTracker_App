@@ -40,10 +40,10 @@ public class dashboard extends AppCompatActivity {
 
     int sumExpense=0;
     int sumIncome=0;
-   // int pass_housing=0,pass_transportation=0,pass_hoteling=0,pass_personalsepnding=0,pass_others=0;
-   // String housing,transportation,hoteling,personalsepnding,others;
+    // int pass_housing=0,pass_transportation=0,pass_hoteling=0,pass_personalsepnding=0,pass_others=0;
+    // String housing,transportation,hoteling,personalsepnding,others;
     //Context context;
-   // Context context;
+    // Context context;
 
     ArrayList<TransactionModel> transactionModelArrayList;
     TransactionAdapter transactionAdapter;
@@ -76,17 +76,17 @@ public class dashboard extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             try {
-                 drawerLayout.openDrawer(GravityCompat.START);
-                 email=findViewById(R.id.nav_user_email);
+                try {
+                    drawerLayout.openDrawer(GravityCompat.START);
+                    email=findViewById(R.id.nav_user_email);
 
 
-                 email.setText(user.getEmail());
+                    email.setText(user.getEmail());
 
-             }
-             catch (Exception e){
+                }
+                catch (Exception e){
 
-             }
+                }
             }
         });
 
@@ -95,74 +95,74 @@ public class dashboard extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-               try {
-                   int id = item.getItemId();
-                   drawerLayout.closeDrawer(GravityCompat.START);
-                   switch (id)
-                   {
-                       case R.id.nav_home:
-                           break;
+                try {
+                    int id = item.getItemId();
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    switch (id)
+                    {
+                        case R.id.nav_home:
+                            break;
 
-                       case R.id.nav_analysis:
-                           AlertDialog.Builder builder=new AlertDialog.Builder(dashboard.this);
-                           builder.setTitle("Alert !")
-                                   .setMessage("This Feature is Coming Soon !")
-                                   .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                                       @Override
-                                       public void onClick(DialogInterface dialog, int which) {
-                                       }
-                                   });
+                        case R.id.nav_analysis:
+                            AlertDialog.Builder builder=new AlertDialog.Builder(dashboard.this);
+                            builder.setTitle("Alert !")
+                                    .setMessage("This Feature is Coming Soon !")
+                                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                        }
+                                    });
 
-                           AlertDialog dialog = builder.create();
-                           dialog.show();
-                          // startActivity(new Intent(dashboard.this,transaction_analysis.class));
-                           break;
+                            AlertDialog dialog = builder.create();
+                            dialog.show();
+                            // startActivity(new Intent(dashboard.this,transaction_analysis.class));
+                            break;
 
-                       case R.id.nav_change_password:
-                           //Toast.makeText(dashboard.this , "Change Password clicked",Toast.LENGTH_SHORT).show();
-                           startActivity(new Intent(dashboard.this,password_change.class));
-                           break;
+                        case R.id.nav_change_password:
+                            //Toast.makeText(dashboard.this , "Change Password clicked",Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(dashboard.this,password_change.class));
+                            break;
 
-                       case R.id.nav_log_out:
-                           // Toast.makeText(dashboard.this , "Log Out clicked",Toast.LENGTH_SHORT).show();
-                           //FirebaseAuth.getInstance().signOut();
-                           AlertDialog.Builder builder1=new AlertDialog.Builder(dashboard.this);
-                           builder1.setTitle("Alert !")
-                                   .setMessage("Are You Sure You Want To Log Out ?")
-                                   .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                                       @Override
-                                       public void onClick(DialogInterface dialog, int which) {
+                        case R.id.nav_log_out:
+                            // Toast.makeText(dashboard.this , "Log Out clicked",Toast.LENGTH_SHORT).show();
+                            //FirebaseAuth.getInstance().signOut();
+                            AlertDialog.Builder builder1=new AlertDialog.Builder(dashboard.this);
+                            builder1.setTitle("Alert !")
+                                    .setMessage("Are You Sure You Want To Log Out ?")
+                                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
 
-                                           firebaseAuth.signOut();
-                                           startActivity(new Intent(dashboard.this,MainActivity.class));
-                                           finish();
+                                            firebaseAuth.signOut();
+                                            startActivity(new Intent(dashboard.this,MainActivity.class));
+                                            finish();
 
-                                       }
-                                   })
-                                   .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                                       @Override
-                                       public void onClick(DialogInterface dialog, int which) {
+                                        }
+                                    })
+                                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
 
-                                       }
-                                   });
+                                        }
+                                    });
 
-                           AlertDialog dialog1 = builder1.create();
-                           dialog1.show();
+                            AlertDialog dialog1 = builder1.create();
+                            dialog1.show();
 
-                           break;
+                            break;
 
-                       case R.id.nav_about:
-                          // Toast.makeText(dashboard.this , "About clicked",Toast.LENGTH_SHORT).show();
-                           startActivity(new Intent(dashboard.this,about_us.class));
-                           break;
+                        case R.id.nav_about:
+                            // Toast.makeText(dashboard.this , "About clicked",Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(dashboard.this,about_us.class));
+                            break;
 
-                       default:
-                           return true;
-                   }
-               }
-               catch (Exception e) {
+                        default:
+                            return true;
+                    }
+                }
+                catch (Exception e) {
 
-               }
+                }
                 return true;
             }
         });
@@ -178,7 +178,8 @@ public class dashboard extends AppCompatActivity {
             }
         });
         try {
-            loadData();
+            //loadData();
+            loadData2();
         }catch (Exception e){}
 
     }
@@ -266,10 +267,13 @@ public class dashboard extends AppCompatActivity {
                             startActivity(intent1);
 
                         }catch (Exception e){}*/
+                        TextView totalIncome = findViewById(R.id.total_income);
+                        TextView totalExpense = findViewById(R.id.total_expense);
+                        TextView totalBalance = findViewById(R.id.total_balance);
 
-                        binding.totalIncome.setText(String.valueOf(sumIncome));
-                        binding.totalExpense.setText(String.valueOf(sumExpense));
-                        binding.totalBalance.setText(String.valueOf((sumIncome-sumExpense)));
+                        totalIncome.setText(String.valueOf(sumIncome));
+                        totalExpense.setText(String.valueOf(sumExpense));
+                        totalBalance.setText(String.valueOf((sumIncome-sumExpense)));
 
                         transactionAdapter=new TransactionAdapter(dashboard.this,transactionModelArrayList);
                         binding.historyRecyclerView.setAdapter(transactionAdapter);
@@ -281,5 +285,51 @@ public class dashboard extends AppCompatActivity {
 
 
     }
+    private void loadData2() {
+        // Initialize sumIncome and sumExpense to zero
+        sumIncome = 0;
+        sumExpense = 0;
+
+        firebaseFirestore.collection("Expenses").document(firebaseAuth.getUid()).collection("Transactions")
+                .get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        for (DocumentSnapshot ds: task.getResult()) {
+                            TransactionModel model = new TransactionModel(
+                                    ds.getString("Amount"),
+                                    ds.getString("Category"),
+                                    ds.getString("Id"),
+                                    ds.getString("Note"),
+                                    ds.getString("Type"),
+                                    ds.getString("date"));
+
+                            transactionModelArrayList.add(model);
+
+                            int amount = Integer.parseInt(model.getAmount());
+                            if ("Income".equals(model.getType())) {
+                                sumIncome += amount;
+                            } else {
+                                sumExpense += amount;
+                            }
+                        }
+
+                        // Calculate totalBalance
+                        int totalBalance = sumIncome - sumExpense;
+
+                        // Set the text for the TextViews
+                        TextView totalIncome = findViewById(R.id.total_income);
+                        TextView totalExpense = findViewById(R.id.total_expense);
+                        TextView finalBalance = findViewById(R.id.total_balance);
+
+                        totalIncome.setText(String.valueOf(sumIncome));
+                        totalExpense.setText(String.valueOf(sumExpense));
+                        finalBalance.setText(String.valueOf(totalBalance));
+
+                        transactionAdapter = new TransactionAdapter(dashboard.this, transactionModelArrayList);
+                        binding.historyRecyclerView.setAdapter(transactionAdapter);
+                    }
+                });
+    }
+
 
 }
