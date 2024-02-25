@@ -7,18 +7,18 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import android.content.Context;
+//import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
+//import android.widget.Toast;
 
 import com.example.udaily.databinding.ActivityDashboardBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
+//import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.navigation.NavigationView;
@@ -104,7 +104,7 @@ public class dashboard extends AppCompatActivity {
                             break;
 
                         case R.id.nav_analysis:
-                            AlertDialog.Builder builder=new AlertDialog.Builder(dashboard.this);
+                            /*AlertDialog.Builder builder=new AlertDialog.Builder(dashboard.this);
                             builder.setTitle("Alert !")
                                     .setMessage("This Feature is Coming Soon !")
                                     .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
@@ -114,8 +114,8 @@ public class dashboard extends AppCompatActivity {
                                     });
 
                             AlertDialog dialog = builder.create();
-                            dialog.show();
-                            // startActivity(new Intent(dashboard.this,transaction_analysis.class));
+                            dialog.show();*/
+                            startActivity(new Intent(dashboard.this,analysis_Newactivity.class));
                             break;
 
                         case R.id.nav_change_password:

@@ -1,5 +1,6 @@
 package com.example.udaily;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -34,7 +35,7 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
 
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         TransactionModel model=transactionModelArrayList.get(position);
         String priority=model.getType();
